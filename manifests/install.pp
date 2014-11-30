@@ -3,9 +3,9 @@
 #
 # Install shuffle
 #
-class shuffle::install {
+class shuffle::install inherits shuffle::params {
     package { 'shuffle':
-        name => 'shuffle',
+        name => "${::shuffle::params::package_name}",
         ensure => installed,
     }
 }

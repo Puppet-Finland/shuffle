@@ -1,9 +1,10 @@
 #
 # == Class: shuffle
 #
-# A class for installing shuffle. Currently this is only used by 
-# puppetagent::cron which requires 'shuffle' on FreeBSD to randomize Puppet 
-# runs.
+# A class for installing shuffle.
+#
+# Currently this is only used by puppetagent::cron which requires 'shuffle' on
+# FreeBSD to randomize Puppet runs.
 #
 # == Parameters
 #
@@ -11,17 +12,18 @@
 #
 # == Examples
 #
-# include shuffle
+#   include shuffle
 #
 # == Authors
 #
 # Samuli Seppänen <samuli@openvpn.net>
 #
+# Samuli Seppänen <samuli.seppanen@gmail.com>
+#
 # == License
 #
-# BSD-license
-# See file LICENSE for details
+# BSD-license. See file LICENSE for details.
 #
-class shuffle {
+class shuffle inherits shuffle::params {
     include shuffle::install
 }
