@@ -8,7 +8,7 @@ class shuffle::params {
     case $::osfamily {
         'FreeBSD': {
             $package_name = 'shuffle'
-	}
+        }
         default: {
             fail("Unsupported OS: ${::osfamily}")
         }

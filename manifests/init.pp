@@ -8,11 +8,12 @@
 #
 # == Parameters
 #
-# None at the moment
+# [*manage*]
+#   Manage shuffle with Puppet. Valid values are 'yes' (default) and 'no'.
 #
 # == Examples
 #
-#   include shuffle
+#   include ::shuffle
 #
 # == Authors
 #
@@ -24,6 +25,13 @@
 #
 # BSD-license. See file LICENSE for details.
 #
-class shuffle inherits shuffle::params {
-    include shuffle::install
+class shuffle
+(
+    $manage = 'yes'
+)
+{
+if $manage == 'yes' {
+
+    include ::shuffle::install
+}
 }
